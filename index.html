@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSCCCII | 50 Years of Golden Leadership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --deep-navy: #020617;
+            --glass-white: rgba(255, 255, 255, 0.05);
+        }
+        
+        body { font-family: 'Montserrat', sans-serif; background: var(--deep-navy); color: #e2e8f0; scroll-behavior: smooth; }
+
+        /* The Gold Text Effect */
+        .gold-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* Mandatory Branding Privacy Layer */
+        .commercial-privacy-blur {
+            filter: blur(25px) brightness(0.7); /* Deep blur for total brand anonymity */
+            transform: scale(1.1);
+            pointer-events: none;
+        }
+
+        .gold-border {
+            border: 1px solid transparent;
+            background: linear-gradient(var(--deep-navy), var(--deep-navy)) padding-box, var(--gold-gradient) border-box;
+        }
+
+        .hero-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(191, 149, 63, 0.15) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0, transparent 50%);
+        }
+
+        .logo-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #bf953f;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(191, 149, 61, 0.3);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Lightbox for Awards */
+        #award-lightbox {
+            display: none; 
+            position: fixed; 
+            inset: 0; 
+            background: rgba(2, 6, 23, 0.98);
+            z-index: 999; 
+            justify-content: center; 
+            align-items: center; 
+            backdrop-filter: blur(15px);
+        }
+        .lightbox-content { 
+            display: flex; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            max-width: 95%;
+        }
+        .lightbox-content img { 
+            max-height: 70vh; 
+            border: 2px solid #bf953f; 
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(191, 149, 61, 0.2);
+        }
+    </style>
+</head>
+<body class="hero-mesh">
+
+    <div id="award-lightbox" onclick="closeAwards()">
+        <button class="absolute top-10 right-10 text-white text-5xl font-light">&times;</button>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img src="forum1.jpg" alt="Award 1">
+            <img src="forum2.jpg" alt="Award 2">
+            <img src="forum3.jpg" alt="Award 2">
+            <img src="forum4.jpg" alt="Award 2">
+            <img src="forum5.jpg" alt="Award 2">
+            
+
+            <img src="/website/anniversary.jpg" alt="Award 2">
+
+
+
+        </div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-white/10 px-6 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="logo-container">
+                    <img src="/website/gchamber.jpg" alt="GSCCCII">
+                </div>
+                <div>
+                    <h1 class="gold-text text-2xl tracking-tighter" style="font-family: 'Cinzel', serif;">GSCCCII</h1>
+                    <p class="text-[9px] uppercase tracking-[0.3em] text-slate-400">GenSan Chamber of Commerce & Industry Inc.</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 text-[11px] font-bold tracking-widest uppercase">
+                <a href="#" class="hover:text-yellow-400 transition-colors">The Vision</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Sectors</a>
+                <a href="javascript:void(0)" onclick="openAwards()" class="text-yellow-500 hover:text-yellow-400 transition-colors">General Assembly</a>
+                <button class="gold-border px-6 py-2 rounded-sm text-yellow-500 hover:scale-105 transition-transform">Membership Inquiry</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-48 pb-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-slate-500 font-semibold tracking-[0.5em] mb-4 uppercase text-sm">Celebrating 50 Years</h2>
+            <h3 class="text-5xl md:text-7xl font-black mb-8 leading-tight">A Legacy of <span class="gold-text">Economic Sovereignty</span></h3>
+            <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-12">
+                Since 1974, we have served as the heartbeat of General Santos City’s industry, transforming a local trading hub into a global agri-industrial powerhouse.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10 flex-1">
+                    <h4 class="text-4xl font-bold gold-text">#1</h4>
+                    <p class="text-slate-500 text-xs mt-2 uppercase">Most Outstanding Chamber</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-md border border-white/10 flex-1">
+                    <h4 class="text-4xl font-bold gold-text">2024</h4>
+                    <p class="text-slate-500 text-xs mt-2 uppercase">Mindanao Excellence Award</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+  
+  
+  <div class="text-white">
+    </div>
+</div>
+    <div class="grid md:grid-cols-2 gap-12 items-center px-6 mb-20">
+  
+  <div class="relative group rounded-3xl overflow-hidden gold-border cursor-pointer h-[400px]" onclick="openAwards()">
+    <img src="award1.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0" alt="Award 1">
+    <img src="award2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700" alt="Award 2">
+
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+    
+    <div class="absolute bottom-6 left-0 right-0 flex justify-center">
+      <span class="font-bold text-yellow-500 tracking-widest uppercase text-xl">
+        Awards
+      </span>
+    </div>
+  </div>
+
+  <div class="relative group rounded-3xl overflow-hidden gold-border cursor-pointer h-[400px]" onclick="openMeetings()">
+    <img src="recognition1.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0" alt="Meeting 1">
+    <img src="recognition2.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700" alt="Meeting 2">
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+    
+    <div class="absolute bottom-6 left-0 right-0 flex justify-center">
+      <span class="font-bold text-yellow-500 tracking-widest uppercase text-xl">
+        Certificates
+      </span>
+    </div>
+  </div>
+
+</div>
+            <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="flex items-center gap-4 mb-16">
+            <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-white/20"></div>
+            <h2 class="text-2xl font-light tracking-widest uppercase">Industrial Advocacy</h2>
+            <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-white/20"></div>
+        </div>
+
+   
+
+            <div class="space-y-8">
+                <div class="p-6 bg-white/5 rounded-xl border-l-4 border-yellow-600">
+                    <h5 class="font-bold text-yellow-500 mb-1 italic">Policy Reform</h5>
+                    <p class="text-sm text-slate-400">Streamlining e-permits and local business incentives to reduce friction for new investors.</p>
+                </div>
+                <div class="p-6 bg-white/5 rounded-xl border-l-4 border-yellow-600">
+                    <h5 class="font-bold text-yellow-500 mb-1 italic">Digital Transformation</h5>
+                    <p class="text-sm text-slate-400">Equipping MSMEs with global-standard digital toolkits to scale beyond regional borders.</p>
+                </div>
+                <div class="p-6 bg-white/5 rounded-xl border-l-4 border-yellow-600">
+                    <h5 class="font-bold text-yellow-500 mb-1 italic">Inter-Regional Connectivity</h5>
+                    <p class="text-sm text-slate-400">Strengthening the BIMP-EAGA corridor through strategic infrastructure advocacy.</p>
+                </div>
+            </div>
+        </div>
+    <section id="contacts" class="w-full py-24 bg-slate-950">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold text-white tracking-tighter uppercase italic">
+        Connect <span class="text-yellow-500">With Us</span>
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-8">
+      
+      <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1.5rem)] p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+        <p class="text-yellow-500 font-bold tracking-widest text-xs uppercase mb-2">Email</p>
+        <p class="text-lg text-slate-200 break-words">gscchamberofcommerce@gmail.com</p>
+      </div>
+
+      <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1.5rem)] p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+        <p class="text-yellow-500 font-bold tracking-widest text-xs uppercase mb-2">Location</p>
+        <p class="text-lg text-slate-200">General Santos City, Philippines</p>
+      </div>
+
+      <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33%-1.5rem)] p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+        <p class="text-yellow-500 font-bold tracking-widest text-xs uppercase mb-2">Phone</p>
+        <p class="text-xl text-slate-200">(083) 554 6108</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="w-full bg-black border-t border-white/5 pt-16">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <img src="/website/gchamber.jpg" alt="Logo" class="mx-auto h-20 w-auto grayscale opacity-50 mb-8">
+    
+    <p class="text-slate-500 text-sm tracking-[0.2em] uppercase font-bold mb-4">
+      The General Santos City Chamber of Commerce and Industry, Inc.
+    </p>
+    <p class="text-slate-700 text-[10px] uppercase tracking-[0.4em] mb-12">
+      © 2026 All Rights Reserved.
+    </p>
+  </div>
+
+  <div class="w-full">
+    <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
+    <div class="h-4 w-full bg-yellow-600/5"></div>
+  </div>
+</footer>
+    <script>
+        function openAwards() {
+            document.getElementById('award-lightbox').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAwards() {
+            document.getElementById('award-lightbox').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+
+</body>
+</html>
